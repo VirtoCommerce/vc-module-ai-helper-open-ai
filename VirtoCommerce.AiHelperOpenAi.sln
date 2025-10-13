@@ -1,0 +1,85 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AEA2EA37-4228-4171-97FE-DA227FFF507C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtoCommerce.AiHelperOpenAi.Web", "src\VirtoCommerce.AiHelperOpenAi.Web\VirtoCommerce.AiHelperOpenAi.Web.csproj", "{A068BA16-39A9-4701-A7B4-71D63AC50CDF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtoCommerce.AiHelperOpenAi.Data", "src\VirtoCommerce.AiHelperOpenAi.Data\VirtoCommerce.AiHelperOpenAi.Data.csproj", "{4F401E8A-139B-4E2F-90D0-8D94D57249F2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtoCommerce.AiHelperOpenAi.Core", "src\VirtoCommerce.AiHelperOpenAi.Core\VirtoCommerce.AiHelperOpenAi.Core.csproj", "{A1B4D9C4-7398-4C06-A753-0EA35F15AFE7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtoCommerce.AiHelperOpenAi.Data.MySql", "src\VirtoCommerce.AiHelperOpenAi.Data.MySql\VirtoCommerce.AiHelperOpenAi.Data.MySql.csproj", "{71ECBAE6-F063-4D62-9C0E-DA00C6A7210A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtoCommerce.AiHelperOpenAi.Data.PostgreSql", "src\VirtoCommerce.AiHelperOpenAi.Data.PostgreSql\VirtoCommerce.AiHelperOpenAi.Data.PostgreSql.csproj", "{162881A2-0631-42FD-B7E2-CCAFB9430F62}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtoCommerce.AiHelperOpenAi.Data.SqlServer", "src\VirtoCommerce.AiHelperOpenAi.Data.SqlServer\VirtoCommerce.AiHelperOpenAi.Data.SqlServer.csproj", "{20ED1624-41BF-40A1-B307-0257436DBD47}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B65DB49A-2617-4F7C-B35A-163434A61607}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtoCommerce.AiHelperOpenAi.Tests", "tests\VirtoCommerce.AiHelperOpenAi.Tests\VirtoCommerce.AiHelperOpenAi.Tests.csproj", "{9B1920C0-D495-4E32-87F0-ABAF29D1C9AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{93D3E056-27E2-4EC4-A47D-8BF856D62EC6}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		LICENSE = LICENSE
+		module.ignore = module.ignore
+		README.md = README.md
+		VirtoCommerce.AiHelperOpenAi.sln.DotSettings = VirtoCommerce.AiHelperOpenAi.sln.DotSettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A068BA16-39A9-4701-A7B4-71D63AC50CDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A068BA16-39A9-4701-A7B4-71D63AC50CDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A068BA16-39A9-4701-A7B4-71D63AC50CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A068BA16-39A9-4701-A7B4-71D63AC50CDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F401E8A-139B-4E2F-90D0-8D94D57249F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F401E8A-139B-4E2F-90D0-8D94D57249F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F401E8A-139B-4E2F-90D0-8D94D57249F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F401E8A-139B-4E2F-90D0-8D94D57249F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1B4D9C4-7398-4C06-A753-0EA35F15AFE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1B4D9C4-7398-4C06-A753-0EA35F15AFE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1B4D9C4-7398-4C06-A753-0EA35F15AFE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1B4D9C4-7398-4C06-A753-0EA35F15AFE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71ECBAE6-F063-4D62-9C0E-DA00C6A7210A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71ECBAE6-F063-4D62-9C0E-DA00C6A7210A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71ECBAE6-F063-4D62-9C0E-DA00C6A7210A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71ECBAE6-F063-4D62-9C0E-DA00C6A7210A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{162881A2-0631-42FD-B7E2-CCAFB9430F62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{162881A2-0631-42FD-B7E2-CCAFB9430F62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{162881A2-0631-42FD-B7E2-CCAFB9430F62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{162881A2-0631-42FD-B7E2-CCAFB9430F62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20ED1624-41BF-40A1-B307-0257436DBD47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20ED1624-41BF-40A1-B307-0257436DBD47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20ED1624-41BF-40A1-B307-0257436DBD47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20ED1624-41BF-40A1-B307-0257436DBD47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B1920C0-D495-4E32-87F0-ABAF29D1C9AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B1920C0-D495-4E32-87F0-ABAF29D1C9AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B1920C0-D495-4E32-87F0-ABAF29D1C9AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B1920C0-D495-4E32-87F0-ABAF29D1C9AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A068BA16-39A9-4701-A7B4-71D63AC50CDF} = {AEA2EA37-4228-4171-97FE-DA227FFF507C}
+		{4F401E8A-139B-4E2F-90D0-8D94D57249F2} = {AEA2EA37-4228-4171-97FE-DA227FFF507C}
+		{A1B4D9C4-7398-4C06-A753-0EA35F15AFE7} = {AEA2EA37-4228-4171-97FE-DA227FFF507C}
+		{71ECBAE6-F063-4D62-9C0E-DA00C6A7210A} = {AEA2EA37-4228-4171-97FE-DA227FFF507C}
+		{162881A2-0631-42FD-B7E2-CCAFB9430F62} = {AEA2EA37-4228-4171-97FE-DA227FFF507C}
+		{20ED1624-41BF-40A1-B307-0257436DBD47} = {AEA2EA37-4228-4171-97FE-DA227FFF507C}
+		{9B1920C0-D495-4E32-87F0-ABAF29D1C9AE} = {B65DB49A-2617-4F7C-B35A-163434A61607}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {423DF71F-7BC1-441C-A0F6-FE528F0F3EB7}
+	EndGlobalSection
+EndGlobal

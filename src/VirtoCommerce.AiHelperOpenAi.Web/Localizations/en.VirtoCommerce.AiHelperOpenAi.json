@@ -1,0 +1,32 @@
+{
+  "AiHelperOpenAi": {
+    "blades": {
+      "hello-world": {
+        "title": "Hello world blade"
+      }
+    }
+  },
+  "permissions": {
+    "ai-helper-open-ai:access": "Open AiHelperOpenAi menu",
+    "ai-helper-open-ai:create": "Create AiHelperOpenAi related data",
+    "ai-helper-open-ai:read": "View AiHelperOpenAi related data",
+    "ai-helper-open-ai:update": "Update AiHelperOpenAi related data",
+    "ai-helper-open-ai:delete": "Delete AiHelperOpenAi related data"
+  },
+  "settings": {
+    "AiHelperOpenAi": {
+      "Model": {
+        "title": "OpenAI model",
+        "description": "Select OpenAI model name"
+      },
+      "Key": {
+        "title": "OpenAI API secret key",
+        "description": "(temporary setting)"
+      },
+      "PromptTranslate": {
+        "title": "Translate prompt",
+        "description": "Use \"{locale}\" and \"{text}\" as parameter for locale name and text to translate"
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module>
+  <id>VirtoCommerce.AiHelperOpenAi</id>
+  <version>3.800.0</version>
+  <version-tag></version-tag>
+
+  <platformVersion>3.906.0</platformVersion>
+  <dependencies>
+    <dependency id="VirtoCommerce.AiHelper" version="3.800.0-alpha.7" />
+  </dependencies>
+
+  <title>AiHelper - OpenAI</title>
+  <description>OpenAI implementation for AiHelper module</description>
+
+  <authors>
+    <author>Vladimir Buravlev</author>
+  </authors>
+  <owners>
+    <owner>VirtoCommerce</owner>
+  </owners>
+
+  <projectUrl>https://github.com/VirtoCommerce/vc-module-ai-helper-open-ai</projectUrl>
+  <iconUrl>Modules/$(VirtoCommerce.AiHelperOpenAi)/Content/logo.png</iconUrl>
+  <requireLicenseAcceptance>false</requireLicenseAcceptance>
+
+  <assemblyFile>VirtoCommerce.AiHelperOpenAi.Web.dll</assemblyFile>
+  <moduleType>VirtoCommerce.AiHelperOpenAi.Web.Module, VirtoCommerce.AiHelperOpenAi.Web</moduleType>
+
+  <releaseNotes>First version.</releaseNotes>
+  <copyright>Copyright © 2025 VirtoCommerce. All rights reserved</copyright>
+  <tags>VirtoCommerce OpenAI helper module</tags>
+  <useFullTypeNameInSwagger>false</useFullTypeNameInSwagger>
+</module>
