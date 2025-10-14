@@ -45,16 +45,8 @@ public class Module : IModule, IHasConfiguration
             }
         });
 
-        //serviceCollection.AddSingleton<IAiTranslationService>(serviceProvider => serviceProvider.GetService<OpenAiTranslationService>());
         serviceCollection.AddSingleton<OpenAiProvider>();
         serviceCollection.AddSingleton<OpenAiTranslationService>();
-        // Override models
-        //AbstractTypeFactory<OriginalModel>.OverrideType<OriginalModel, ExtendedModel>().MapToType<ExtendedEntity>();
-        //AbstractTypeFactory<OriginalEntity>.OverrideType<OriginalEntity, ExtendedEntity>();
-
-        // Register services
-        //serviceCollection.AddTransient<IMyService, MyService>();
-        //serviceCollection.AddTransient<IAiTranslationService, OpenAiTranslationService>();
     }
 
     public void PostInitialize(IApplicationBuilder appBuilder)
@@ -66,13 +58,12 @@ public class Module : IModule, IHasConfiguration
         settingsRegistrar.RegisterSettings(ModuleConstants.Settings.AllSettings, ModuleInfo.Id);
 
         var openAiTranslationService = serviceProvider.GetRequiredService<OpenAiTranslationService>();
-        //appBuilder.UseAiProvider<OpenAiProvider>(ModuleConstants.Providers.OpenAi).WithServices(new List<IAiTask> { openAiTranslationService });
         var importerRegistrar = appBuilder.ApplicationServices.GetService<IAiProviderRegistrar>();
         importerRegistrar.Register<OpenAiProvider>(() => appBuilder.ApplicationServices.GetService<OpenAiProvider>())
             .WithService(openAiTranslationService);
 
         var settingsManager = appBuilder.ApplicationServices.GetRequiredService<ISettingsManager>();
-        CoreModuleConstants.Settings.General.AiHelperTranslationProvider.AllowedValues = CoreModuleConstants.Settings.General.AiHelperTranslationProvider.AllowedValues.Concat(importerRegistrar.GetAiProvidersByService<IAiTranslationService>().Select(x => x.ProviderType).ToArray()).ToArray();
+        CoreModuleConstants.Settings.General.AiHelperTranslationProvider.AllowedValues = CoreModuleConstants.Settings.General.AiHelperTranslationProvider.AllowedValues.Concat(importerRegistrar.GetAiProvidersByService<IAiTranslationService>().Select(x => x.ProviderType).ToArray()).Distinct().ToArray();
 
         // Apply migrations
         using var serviceScope = serviceProvider.CreateScope();
