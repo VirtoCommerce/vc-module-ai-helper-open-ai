@@ -6,7 +6,7 @@
 
   <platformVersion>3.906.0</platformVersion>
   <dependencies>
-    <dependency id="VirtoCommerce.AiHelper" version="3.800.0-alpha.7" />
+    <dependency id="VirtoCommerce.AiHelper" version="3.800.0-alpha.8" />
   </dependencies>
 
   <title>AiHelper - OpenAI</title>
