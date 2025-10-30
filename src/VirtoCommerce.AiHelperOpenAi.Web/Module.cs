@@ -48,6 +48,7 @@ public class Module : IModule, IHasConfiguration
         serviceCollection.AddSingleton<OpenAiProvider>();
         serviceCollection.AddSingleton<OpenAiTextGenerationService>();
         serviceCollection.AddSingleton<OpenAiImageRecognitionService>();
+        serviceCollection.AddSingleton<OpenAiImageGenerationService>();
     }
 
     public void PostInitialize(IApplicationBuilder appBuilder)
@@ -60,10 +61,12 @@ public class Module : IModule, IHasConfiguration
 
         var openAiTranslationService = serviceProvider.GetRequiredService<OpenAiTextGenerationService>();
         var openAiImageRecognitionService = serviceProvider.GetRequiredService<OpenAiImageRecognitionService>();
+        var openAiImageGenerationService = serviceProvider.GetRequiredService<OpenAiImageGenerationService>();
         var aiProviderRegistrar = appBuilder.ApplicationServices.GetService<IAiProviderRegistrar>();
         aiProviderRegistrar.Register<OpenAiProvider>(() => appBuilder.ApplicationServices.GetService<OpenAiProvider>())
             .WithService(openAiTranslationService)
-            .WithService(openAiImageRecognitionService);
+            .WithService(openAiImageRecognitionService)
+            .WithService(openAiImageGenerationService);
 
         var settingsManager = appBuilder.ApplicationServices.GetRequiredService<ISettingsManager>();
         CoreModuleConstants.Settings.General.AiHelperTextGenerationProvider.AllowedValues =
@@ -72,6 +75,9 @@ public class Module : IModule, IHasConfiguration
         CoreModuleConstants.Settings.General.AiHelperImageRecognitionProvider.AllowedValues =
             CoreModuleConstants.Settings.General.AiHelperImageRecognitionProvider.AllowedValues
             .Concat(aiProviderRegistrar.GetAiProvidersByService<IAiImageRecognitionService>().Select(x => x.ProviderType).ToArray()).Distinct().ToArray();
+        CoreModuleConstants.Settings.General.AiHelperImageGenerationProvider.AllowedValues =
+            CoreModuleConstants.Settings.General.AiHelperImageGenerationProvider.AllowedValues
+            .Concat(aiProviderRegistrar.GetAiProvidersByService<IAiImageGenerationService>().Select(x => x.ProviderType).ToArray()).Distinct().ToArray();
 
         // Apply migrations
         using var serviceScope = serviceProvider.CreateScope();
