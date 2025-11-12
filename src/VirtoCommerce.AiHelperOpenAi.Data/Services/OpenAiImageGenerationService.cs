@@ -23,7 +23,7 @@ public class OpenAiImageGenerationService : IAiImageGenerationService
         var result = AbstractTypeFactory<AiRequestResult>.TryCreateInstance();
 
         var apiKey = await _settingsManager.GetValueAsync<string>(Settings.General.AiHelperOpenAiKey);
-        var model = "dall-e-3";//await _settingsManager.GetValueAsync<string>(Settings.General.AiHelperOpenAiModel);
+        var model = await _settingsManager.GetValueAsync<string>(Settings.General.AiHelperOpenAiPistureModel);
 
         if (!string.IsNullOrEmpty(apiKey) && !string.IsNullOrEmpty(model) && !string.IsNullOrEmpty(prompt))
         {

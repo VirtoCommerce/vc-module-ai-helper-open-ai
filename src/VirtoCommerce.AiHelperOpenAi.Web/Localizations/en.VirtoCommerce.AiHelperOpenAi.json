@@ -19,6 +19,10 @@
         "title": "OpenAI model",
         "description": "Select OpenAI model name"
       },
+      "PictureModel": {
+        "title": "OpenAI images model",
+        "description": "Select OpenAI model name for image generating"
+      },
       "Key": {
         "title": "OpenAI API secret key",
         "description": "(temporary setting)"
@@ -26,6 +30,18 @@
       "PromptTranslate": {
         "title": "OpenAI translate prompt",
         "description": "Use \"{locale}\" and \"{text}\" as parameter for locale name and text to translate"
+      },
+      "PromptDescriptionGeneration": {
+        "title": "OpenAI description generation without image prompt",
+        "description": "Use \"{locale}\" and \"{product}\" as parameter for locale name and product to generate description"
+      },
+      "PromptDescriptionGenerationByImage": {
+        "title": "OpenAI description generation by image prompt",
+        "description": "Use \"{locale}\" and \"{product.name}\" as parameter for locale name and product to generate description"
+      },
+      "PromptFillPropertiesByImage": {
+        "title": "OpenAI fill properties by image prompt",
+        "description": "Use \"{product.name}\" and \"{jsonTemplate}\" as parameter for product name and properties template to fill property values"
       }
     }
   }

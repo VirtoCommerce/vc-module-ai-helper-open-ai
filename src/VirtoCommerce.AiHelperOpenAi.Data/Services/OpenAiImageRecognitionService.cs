@@ -80,22 +80,19 @@ public class OpenAiImageRecognitionService : IAiImageRecognitionService
         return result;
     }
 
+    public virtual Task<string> GetRecognitionPrompt()
+    {
+        return _settingsManager.GetValueAsync<string>(Settings.General.AiHelperOpenAiPromptDescriptionGenerationByImage);
+    }
+
+    public virtual Task<string> GetFillPropertiesPrompt()
+    {
+        return _settingsManager.GetValueAsync<string>(Settings.General.AiHelperOpenAiPromptFillPropertiesByImage);
+    }
+
     private bool IsUrl(string s)
     {
         s = s.Trim();
         return Regex.IsMatch(s, @"^https?://(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&//=]*)$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
     }
-
-    //private string GetImageFormat(string imagePath)
-    //{
-    //    var extension = Path.GetExtension(imagePath).ToLower();
-    //    return extension switch
-    //    {
-    //        ".jpg" or ".jpeg" => "image/jpg",
-    //        ".png" => "image/png",
-    //        ".gif" => "image/gif",
-    //        ".webp" => "image/webp",
-    //        _ => "image/jpg"
-    //    };
-    //}
 }

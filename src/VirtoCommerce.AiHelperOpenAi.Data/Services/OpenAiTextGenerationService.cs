@@ -45,4 +45,9 @@ public class OpenAiTextGenerationService : IAiTextGenerationService
     {
         return _settingsManager.GetValueAsync<string>(Settings.General.AiHelperOpenAiPromptTranslate);
     }
+
+    public virtual Task<string> GetProductDescriptionGenerationPrompt()
+    {
+        return _settingsManager.GetValueAsync<string>(Settings.General.AiHelperOpenAiPromptDescriptionGeneration);
+    }
 }
